@@ -1,1 +1,1 @@
-export { clickaway } from './clickaway.js';
+export { clickaway } from './temp.js';
