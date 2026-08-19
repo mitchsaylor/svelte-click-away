@@ -10,7 +10,7 @@ Install the package from NPM with your package manager of choice.
 npm i svelte-click-away -D
 ```
 
-Sample use case:
+Sample use case (with TailwindCSS):
 
 ```
 // +page.svelte
@@ -24,9 +24,14 @@ Sample use case:
     }
 </script>
 
-<div use:clickAway onclickaway={() => dropdownOpen = false} data-open={dropdownOpen} class="group" >
+<div 
+    use:clickAway
+    onclickaway={() => dropdownOpen = false}
+    data-open={dropdownOpen}
+    class="group"
+>
     <button onclick={toggleMenu}>
-        Toggle Menu
+        Menu
     </button>
     <div class="hidden group-data-[open=true]:block">
         <!-- Dropdown contents -->
