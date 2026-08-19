@@ -1,6 +1,7 @@
 # Svelte ClickAway Helper
 
 A helper function that facilitates handling user interface elements that are reactive to user disengagement via a click outside of the element.
+
 Built for and with [Svelte 5](https://svelte.dev/).
 
 ## Usage
@@ -8,7 +9,7 @@ Built for and with [Svelte 5](https://svelte.dev/).
 Install the package from NPM with your package manager of choice.
 
 ```sh
-npm i svelte-click-away -D
+npm i -D svelte-click-away
 ```
 
 Sample use case (with TailwindCSS):
