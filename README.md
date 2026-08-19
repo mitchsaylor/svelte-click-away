@@ -9,7 +9,7 @@ Built for and with [Svelte 5](https://svelte.dev/).
 Install the package from NPM with your package manager of choice.
 
 ```sh
-npm i svelte-click-away -D
+npm i -D svelte-click-away
 ```
 
 Sample use case (with TailwindCSS):
