@@ -1,13 +1,14 @@
-export function clickAway(node: HTMLElement) {
+import type { Attachment } from 'svelte/attachments';
+
+export const clickaway: Attachment = (node: Element) => {
 	const handleClick = (event: MouseEvent) => {
-		if (node && !node.contains(event.target as HTMLElement) && !event.defaultPrevented) {
-			node.dispatchEvent(new CustomEvent('clickaway', node as CustomEventInit));
+		const target = event.target as Node | null;
+		if (node && !node.contains(target) && !event.defaultPrevented) {
+			node.dispatchEvent(new CustomEvent('clickaway', { detail: { target } }));
 		}
 	};
 	document.addEventListener('click', handleClick, true);
-	return {
-		destroy() {
-			document.removeEventListener('click', handleClick, true);
-		}
+	return () => {
+		document.removeEventListener('click', handleClick, true);
 	};
-}
+};

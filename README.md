@@ -1,12 +1,12 @@
-# Svelte ClickAway Helper
+# Svelte Click Away
 
 A helper function that facilitates handling user interface elements that are reactive to user disengagement via a click outside of the element.
 
-Built for and with [Svelte 5](https://svelte.dev/).
+Requires [Svelte](https://svelte.dev/) 5.29 or newer.
 
 ## Usage
 
-Install the package from NPM with your package manager of choice.
+Install the package
 
 ```sh
 npm i -D svelte-click-away
@@ -15,29 +15,30 @@ npm i -D svelte-click-away
 Sample use case (with TailwindCSS):
 
 ```html
-// +page.svelte
+// *.svelte
 
 <script lang="ts">
-    import { clickAway } from "svelte-click-away"
+    import { clickaway } from "svelte-click-away"
 
-    let dropdownOpen: boolean = $state(false)
+    let menuOpen: boolean = $state(false)
 
     const toggleMenu = () => {
-        dropdownOpen = !dropdownOpen
+        menuOpen = !menuOpen
     }
 </script>
 
 <div 
-    use:clickAway
-    onclickaway={() => dropdownOpen = false}
-    data-open={dropdownOpen}
+    {@attach clickaway}
+    onclickaway={() => menuOpen = false}
+    data-open={menuOpen}
     class="group"
 >
     <button onclick={toggleMenu}>
         Menu
     </button>
     <div class="hidden group-data-[open=true]:block">
-        <!-- Dropdown contents -->
+        <p>Sample menu contents</p>
+        <!-- Menu contents -->
     </div>
 </div>
 ```

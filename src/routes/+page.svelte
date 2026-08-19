@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { clickAway } from '#lib/index.ts';
+	import { clickaway } from '#lib/index.ts';
 
 	let open: boolean = $state(false);
 
@@ -16,7 +16,7 @@
 	</p>
 	<button
 		class="border border-black p-3 hover:bg-black/5"
-		use:clickAway
+		{@attach clickaway}
 		onclickaway={handleClickAway}
 		onclick={() => (open = true)}
 	>
