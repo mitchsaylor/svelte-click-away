@@ -14,8 +14,9 @@ npm i -D svelte-click-away
 
 Sample use case (with TailwindCSS):
 
-```html
+```javascript
 // +page.svelte
+
 <script lang="ts">
     import { clickAway } from "svelte-click-away"
 
