@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { clickaway } from '#lib/index.ts';
+	import { clickaway } from '#lib/index.js';
 
 	let open: boolean = $state(false);
 
