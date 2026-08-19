@@ -1,0 +1,1 @@
+# svelte-click-away
