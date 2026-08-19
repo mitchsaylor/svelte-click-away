@@ -1,65 +1,41 @@
-# Svelte library
+# Svelte ClickAway Helper
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+A helper function that facilitates handling user interface elements that are reactive to user disengagement via a click outside of the element.
+Built for and with [Svelte 5](https://svelte.dev/).
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Usage
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+Install the package from NPM with your package manager of choice.
 
 ```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm i svelte-click-away -D
 ```
 
-To recreate this project with the same configuration:
+Sample use case (with TailwindCSS):
 
-```sh
-# recreate this project
-pnpm dlx sv@1.0.0-next.2 create --template library --types ts --add prettier eslint tailwindcss="plugins:forms" --install pnpm ./
 ```
+// +page.svelte
+<script lang="ts">
+    import { clickAway } from "svelte-click-away"
 
-## Developing
+    let dropdownOpen: boolean = $state(false)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+    const toggleMenu = () => {
+        dropdownOpen = !dropdownOpen
+    }
+</script>
 
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```sh
-npm pack
-```
-
-To create a production version of your showcase app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```sh
-npm publish
+<div 
+    use:clickAway
+    onclickaway={() => dropdownOpen = false}
+    data-open={dropdownOpen}
+    class="group"
+>
+    <button onclick={toggleMenu}>
+        Menu
+    </button>
+    <div class="hidden group-data-[open=true]:block">
+        <!-- Dropdown contents -->
+    </div>
+</div>
 ```

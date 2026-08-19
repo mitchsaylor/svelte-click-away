@@ -1,1 +1,1 @@
-// Reexport your entry components here
+export { clickAway } from '#lib/clickAway.ts';
