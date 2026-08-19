@@ -5,6 +5,7 @@
 	"repository": {
 		"url": "https://github.com/mitchsaylor/svelte-click-away"
 	},
+	"author": "Mitch Saylor <info@saylor.io> (https://saylor.io)",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
