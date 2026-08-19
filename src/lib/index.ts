@@ -1,1 +1,1 @@
-export { clickAway } from '#lib/clickAway.ts';
+export { clickAway } from './clickAway.js';
