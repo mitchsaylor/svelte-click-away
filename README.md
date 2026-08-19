@@ -1,6 +1,7 @@
 # Svelte ClickAway Helper
 
-A helper function that facilitates handling user interface elements that are reactive to user disengagement via a click outside of the element. Built for and with [Svelte 5](https://svelte.dev/).
+A helper function that facilitates handling user interface elements that are reactive to user disengagement via a click outside of the element.
+Built for and with [Svelte 5](https://svelte.dev/).
 
 ## Usage
 
