@@ -1,5 +1,11 @@
 # svelte-click-away
 
+## 0.1.0
+
+### Minor Changes
+
+- [#14](https://github.com/mitchsaylor/svelte-click-away/pull/14) [`70fe0d9`](https://github.com/mitchsaylor/svelte-click-away/commit/70fe0d94bea0cd966683b426d4842fdfefb7a188) - Feat: switch to attachment, update types, standardize name case
+
 ## 0.0.8
 
 ### Patch Changes
