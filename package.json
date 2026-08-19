@@ -35,6 +35,7 @@
 		"svelte": "^5.0.0"
 	},
 	"devDependencies": {
+		"@changesets/changelog-github": "^1.0.0",
 		"@changesets/cli": "^3.0.0",
 		"@eslint/js": "^10.0.1",
 		"@sveltejs/kit": "^3.0.0-next.0",
