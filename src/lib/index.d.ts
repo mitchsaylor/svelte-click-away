@@ -9,4 +9,5 @@ declare module 'svelte/elements' {
 		) => void;
 	}
 }
-export {};
+
+export { clickaway } from "./clickaway";
