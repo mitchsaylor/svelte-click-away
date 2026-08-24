@@ -1,9 +1,9 @@
 {
 	"extends": "$app/tsconfig",
 	"compilerOptions": {
-		"sourceMap": true,
-		"strict": true
+		"strict": true,
+		"declaration": true,
+		"declarationMap": true
 	},
-	"moduleResolution": "NodeNext",
-	"declarationMap": true
+	"include": ["src", "vite.config.ts"]
 }
